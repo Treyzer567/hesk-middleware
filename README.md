@@ -1,6 +1,6 @@
 # Hesk Middleware
 
-A Node.js/Express proxy that bridges the ticket submission form on the landing page to a self-hosted [Hesk](https://www.hesk.com/) helpdesk instance. Hesk doesn't expose a clean REST API for ticket creation, so this middleware handles the session management, CSRF token extraction, optional file uploads, and form submission on behalf of the frontend.
+A Node.js/Express proxy that bridges the ticket submission form on the landing page to a self-hosted [Hesk](https://www.hesk.com) helpdesk instance. Hesk doesn't expose a clean REST API for ticket creation, so this middleware handles the session management, CSRF token extraction, optional file uploads, and form submission on behalf of the frontend.
 
 Triggered by the ticket form hosted on the [landing page](https://github.com/Treyzer567/landing-page), which is embedded as an iframe panel in Homarr.
 
@@ -66,3 +66,12 @@ Runs as a Docker container defined in `landing-compose.yml` in the [landing-page
 | Repo | Description |
 |------|-------------|
 | [landing-page](https://github.com/Treyzer567/landing-page) | Frontend hub — hosts the ticket submission form iframe |
+
+---
+
+## External Projects
+
+| Project | Description |
+|---------|-------------|
+| [Hesk](https://www.hesk.com) | Self-hosted helpdesk software — the ticket system this middleware connects to |
+| [Homarr](https://github.com/homarr-labs/homarr) | Self-hosted dashboard — where the ticket form is embedded as an iFrame |
